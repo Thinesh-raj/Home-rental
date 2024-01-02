@@ -1,0 +1,28 @@
+#test{
+    margin:2% 2%;
+}
+#test h1{
+    text-align: center;
+}
+#test-div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    margin-left: 20%;
+    box-shadow:0 0 10px 0 rgba(0,0,0,.15);
+}
+#test-div #part1{
+    width:15%
+}
+#test-div #part2{
+    width:65%
+}
+#test-div img{
+    width:100%;
+    border-radius: 50%;
+    border: 15px solid #6bb7be;
+}
+#test-div #part2 h1{
+    text-align: start;
+    color: #6bb7be;
+}

@@ -1,0 +1,109 @@
+#grid{
+    width:30%;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0 30px rgba(0,0,0,.08);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.G-img{
+    width: 100%;
+    height: 59%;
+    overflow: hidden;
+}
+#grid img{
+    width: 100%;
+}
+#grid #G-cont{
+    width: 100%;
+    margin-left: 5%;
+}
+.foot{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    padding: 2% 0;
+    border-top: 1px dashed rgba(0,185,142,.3);
+    font-family: "Heebo",sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666565;
+}
+.foot .foot-i{
+    color: #00B98E;
+    font-size: 1rem;
+    margin: 1%;
+}
+.i1{
+    margin-right: 3%!important;
+    font-size: 1.2rem!important;
+}
+.i2{
+    margin-right: 3%!important;
+}
+.center{
+    border-right: 1px dashed rgba(0,185,142,.3);
+    border-left: 1px dashed rgba(0,185,142,.3);
+}
+
+#G-cont h3{
+    color: #00B98E;
+    font-family: "Inter",sans-serif;
+    font-weight: 700;
+    line-height: 1.2
+}
+#G-cont .h3{
+    color: #0E2E50;
+    margin: 1% 0;
+}
+#G-cont p{
+    width: 100%;
+    font-family: "Heebo",sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666565;
+    margin: 3.5% 0%;
+}
+#G-cont .map{
+    color: #00B98E;
+    font-size: 1.1rem;
+}
+
+.f1{
+    position: absolute;
+    background-color: #00B98E;
+    color: #fff;
+    padding: 1% 3.5%;
+    top: 5%;
+    left: 6%;
+    border-radius: 5px;
+    font-family: "Heebo",sans-serif;
+    font-size: 1.08rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.f2{
+    position: absolute;
+    background-color: #fff;
+    color: #00B98E;
+    padding: 1% 4%;
+    top:53.5%;
+    left:6%;
+    border-radius: 5px;
+    font-family: "Heebo",sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+
+/* hover */
+
+#grid:hover img{
+    transform: scale(1.1);
+}

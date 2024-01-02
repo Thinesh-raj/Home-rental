@@ -1,0 +1,13 @@
+#Blog{
+    margin: 4% 2% 4% 2%;
+}
+#Blog h1{
+    font-size: 1.6rem;
+    text-align: center;
+}
+#blog-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2% 8%;
+}

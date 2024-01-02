@@ -1,0 +1,41 @@
+#banner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:2% 2%;
+    background-color:rgb(243, 237, 243);
+}
+#part2{
+    width: 40%;
+    margin: 0 6%;
+    padding: 3% 0%;
+
+}
+#part1{
+    width: 42%;
+    margin: 0 0% 0 6%;
+}
+#part2 h1{
+    margin:0;
+    font-size:2.5rem;
+    font-weight: 700;
+}
+#part2 p{
+    margin:3% 4% 3% 0;
+    font-size: 1.2rem;
+    line-height: 30px;
+    font-weight: 500;
+    color: #000;
+}
+#part2 #btn{
+    margin: 3% 3%;
+    width: 25%;
+    height: 40px;
+    border: none;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color:  #6bb7be;
+}
+#part1 img{
+    width: 100%;
+}

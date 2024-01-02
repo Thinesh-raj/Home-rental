@@ -1,0 +1,32 @@
+#cont {
+    width: 26%;
+    padding: 3% 0 3% 2%;
+    margin-top: 3%;
+}
+
+#cont img {
+    width: 70%;
+    margin-left: 10%;
+    height: 75%;
+}
+
+#cont p {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1.2rem;
+}
+
+#cont div {
+    display: flex;
+    justify-content: space-between;
+    margin: 3% 7% 0% 3%;
+}
+
+#cont #dollar {
+    color: #6bb7be;
+    margin-right: 3%;
+}
+
+#cont a {
+    color: #6bb7be;
+}

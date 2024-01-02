@@ -1,0 +1,31 @@
+.Propstype{
+    margin: 0 6%;
+    padding: 3% 0 1% 0;
+    background-color: #fff;
+}
+.Propstype h1{
+    font-size: 2.9rem;
+    font-family: "Inter",sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #0E2E50;
+    text-align: center;
+}
+.Propstype p{
+    font-family: "Heebo",sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666565;
+    margin: 0 29%;
+    text-align: center;
+}
+
+/* block */
+
+.block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 3% 0 1% 0;
+}
