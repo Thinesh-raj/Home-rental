@@ -1,0 +1,39 @@
+.packages{
+    margin: 0 6%;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+}
+.packages h3{
+    text-align: center;
+    margin: 0 44%;
+    padding-top: 5%;
+    padding-bottom: .3%;
+    border-bottom: 2px solid #EC8B5E;
+}
+.packages h1 {
+    text-align: center;
+    margin: 1% 30%;
+    padding-bottom: .3%;
+    border-bottom: 2px solid #EC8B5E;
+}
+.block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2% 3% 0 3%;
+}
+.zoom{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .6s ease-in-out;
+}
+.shrink{
+    transform: scale(0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

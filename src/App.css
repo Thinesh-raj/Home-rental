@@ -1,9 +1,9 @@
 *{
-  font-family: Poppins,sans-serif;
   transition: 0.5s ease-in-out;
 }
 body{
-  background-color: #EFFDF5;
+  background-color: #fff;
+  position: relative;
 }
 .App {
   text-align: center;

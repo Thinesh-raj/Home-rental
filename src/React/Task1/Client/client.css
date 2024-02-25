@@ -1,0 +1,90 @@
+.client{
+    margin: 0 6%;
+    background-color: #fff;
+    padding-top: 4%;
+    padding-bottom: 5%;
+    position: relative;
+}
+.client h1{
+    text-align: center;
+    font-family: "Inter",sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #0E2E50;
+    font-size: 2.8rem;
+    margin-bottom: 1.3%;
+}
+.client p{
+    font-family: "Heebo",sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666565;
+    text-align: center;
+    margin: 0 28%;
+}
+.template{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3% 4%;
+}
+
+
+.left{
+    position: absolute;
+    padding: 1.2% 1.4%;
+    border-radius: 50%;
+    background-color: #00B98E;
+    top:57%;
+    left: 2.3%;
+}
+.client .icon{
+    color: #fff;
+    font-size: 1.2rem;
+}
+.right{
+    position: absolute;
+    background-color: #00B98E;
+    padding:1.2% 1.4%;
+    border-radius: 50%;
+    top:57%;
+    right: 2.3%;
+
+}
+
+
+@media only screen and (min-width:150px)and (max-width:480px){
+    .client{
+        margin: 0;
+    }
+    .client h1{
+        font-size: 2.1rem;
+    }
+    .client p{
+        margin: 0 10%;
+    }.template{
+        flex-wrap:wrap ;
+    }
+    #hide{
+        display: none;
+    }
+}
+@media only screen and (min-width:480px)and (max-width:720px){
+    .client{
+        margin: 0;
+    }
+    .client h1{
+        font-size: 2.1rem;
+    }
+    .client p{
+        margin: 0 10%;
+    }.template{
+        flex-wrap:wrap ;
+    }
+    #hide{
+        display: none;
+    }
+}
+@media only screen and (min-width:720px)and (max-width:1000px){
+    
+}
