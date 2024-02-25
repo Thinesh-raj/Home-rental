@@ -1,6 +1,6 @@
 import "./student.css"
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { FaArrowLeft, FaChevronLeft, FaChevronRight, FaThumbsDown } from "react-icons/fa6";
 import bg from "../Images/logo.png"
@@ -8,6 +8,7 @@ import Graph from "./graph";
 
 function Student() {
     const { studentname } = useParams();
+    const Navigate = useNavigate();
     const [data, setData] = useState([]);
     const [input, setInput] = useState(false);
     const [attend, setAttend] = useState([]);
@@ -19,9 +20,9 @@ function Student() {
     const month = today.getMonth() + 1;
     const year = today.getFullYear();
     const [date, setdate] = useState(firstday);
-    const [currmonth, setCurrmonth] = useState(month);
-    const currentdate = `${month}/${firstday + 1}/${year}`;
-    const weekdayone = `${currmonth}/${date + 1}/${year}`;
+    const [currmonth, setCurrmonth] = useState(12);
+    const currentdate = `${month}/${25}/${year}`;
+    const weekdayone = `${currmonth}/${25}/${2023}`;
     let week = [];
     for (let i = date + 1; i < date + 6; i++) {
         if (currmonth % 2 == 0) {
@@ -48,6 +49,8 @@ function Student() {
                 setAttend(leave.slice(index, index + 5))
             })
             .catch(err => console.log(err.message))
+        let item = localStorage.getItem("name")
+        if (item.substring(1, item.length - 1) != studentname) Navigate("/page/Student")
     }, [setData]);
     function insert(e) {
         const { name, value } = e.target;
@@ -80,7 +83,7 @@ function Student() {
         setdate(value);
         setCurrmonth(change);
         let index = graph.findIndex(e => e.date == currdate)
-        console.log(currdate,index)
+        console.log(currdate, index)
         setAttend(graph.slice(index, index + 5));
         (currentdate == currdate) ? setpop(false) : setpop(true);
     }
@@ -107,9 +110,9 @@ function Student() {
             <div className="pd"><p>Father's Occupation : {data.foccup}</p></div>
             <div className="pd"><p>Mother's Occupation : {data.moccup}</p></div>
             {input ? <div className="editdiv">
-                <div className="edit edit-E"><span>Email :</span><input value={data.email} onChange={insert} name="email" type="email"/></div>
-                <div className="edit"><span>Father's Mobile.no :</span><input value={data.fphn} onChange={insert} name="fphn" type="number"/></div>
-                <div className="edit"><span>Mother's Mobile.no :</span><input value={data.mphn} onChange={insert} name="mphn" type="number"/></div>
+                <div className="edit edit-E"><span>Email :</span><input value={data.email} onChange={insert} name="email" type="email" /></div>
+                <div className="edit"><span>Father's Mobile.no :</span><input value={data.fphn} onChange={insert} name="fphn" type="number" /></div>
+                <div className="edit"><span>Mother's Mobile.no :</span><input value={data.mphn} onChange={insert} name="mphn" type="number" /></div>
                 <div className="p-edit"><span>Address:</span><input value={data.address} onChange={insert} name="address" /></div>
                 <button onClick={() => update(data.id)}>Save</button></div> :
                 <div className="editdiv">
@@ -123,7 +126,7 @@ function Student() {
                 <h1 className="attendh1">Attendance</h1>
                 <div className="graph">{
                     attend.map(e => {
-                        return <div key={e.id} className={e.present == "yes" ? "grow" : "none"}>{e.present == "no" ? <><p>A</p><p>B</p><p>S</p><p>E</p><p>N</p><p>T</p></>: <>
+                        return <div key={e.id} className={e.present == "yes" ? "grow" : "none"}>{e.present == "no" ? <><p>A</p><p>B</p><p>S</p><p>E</p><p>N</p><p>T</p></> : <>
                             <div className="div1"></div>
                             <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></>}
                         </div>

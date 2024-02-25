@@ -3,15 +3,14 @@ import axios from "axios";
 import bg from "../Images/logo.png";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { setShow, showtype ,datatype} from "../Redux/reducer";
+import { setShow, showtype } from "../Redux/reducer";
 import { useDispatch, useSelector } from "react-redux";
 import { FaArrowLeft, FaTrashArrowUp, FaUserPen, FaUser, FaArrowUp19, FaVenusMars, FaEnvelope, FaPhone, FaLocationDot, FaChevronDown } from "react-icons/fa6";
 function Admin() {
     const { adminname } = useParams();
     const dispatch = useDispatch();
     const type = useSelector(showtype);
-    const validname=useSelector(datatype);
-    const Navigate=useNavigate();
+    const Navigate = useNavigate();
     const [part, setPart] = useState([]);
     const [leave, setLeave] = useState([]);
     const [alert1, setAlert1] = useState(false);
@@ -21,7 +20,6 @@ function Admin() {
     const [ask, setAsk] = useState({ id: null, cnfm: false });
     const [btn, setBtn] = useState(0)
     const [logobj, setLogobj] = useState({ name: adminname, timein: null, timeout: null, active: null, date: new Date().toLocaleDateString() });
-    if (adminname!=validname)Navigate("/page/Admin")
     let arrlen1 = teacherData.length / 5;
     let arrlen2 = Math.floor(teacherData.length / 5);
     teacherData.length <= 5 ? arrlen2 = 0 : ((arrlen1 % arrlen2) === 0 ? arrlen2 = arrlen2 + 0 : arrlen2 = arrlen2 + 1);
@@ -38,7 +36,9 @@ function Admin() {
         axios.get("http://localhost:3000/Leave", { headers: { Authorization: 'Basic U2FtOjIwNTY=' } })
             .then(res => setLeave(res.data))
             .catch(err => console.log(err.message))
-    }, [adminname])
+        let item = localStorage.getItem("name")
+        if (item.substring(1, item.length-1) != adminname) Navigate("/page/Admin")
+    }, [adminname,Navigate])
     alert1 && setTimeout(() => {
         setAlert1(false)
     }, 2000)

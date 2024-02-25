@@ -5,11 +5,12 @@
     margin: 0 6%;
     background-color: #fff;
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 999;
     width: 82%;
     border-bottom: 8px solid #141A46;
 }
+
 .part1 {
     display: flex;
     width: 65%;
@@ -28,7 +29,7 @@
 
 .navbar h1 {
     color: #356ba2 !important;
-    letter-spacing:6px;
+    letter-spacing: 6px;
 }
 
 .navbar a {
@@ -213,6 +214,7 @@ span {
 .alumniwrap {
     padding-top: 4%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
@@ -228,7 +230,7 @@ span {
     width: 70%;
     padding: 23% 8%;
     background-image: url(../Images/pencil.webp);
-    background-size:cover;
+    background-size: cover;
     background-attachment: fixed;
     display: flex;
     position: relative;
@@ -242,9 +244,11 @@ span {
     z-index: 9;
     overflow: hidden;
 }
-.show h3{
+
+.show h3 {
     margin-top: 20%;
 }
+
 .anime img {
     width: 600px;
     height: 300px;
@@ -252,7 +256,8 @@ span {
     border-radius: 20px;
     box-shadow: 0 0 5px gray;
 }
-.anime span{
+
+.anime span {
     position: absolute;
     top: 10%;
     right: 9%;
@@ -354,9 +359,11 @@ span {
     align-items: center;
     margin-bottom: 1%;
 }
-.location span{
+
+.location span {
     width: 90%;
 }
+
 .phone {
     display: flex;
     align-items: center;
@@ -416,16 +423,90 @@ span {
 .name-ad p {
     margin-top: 1%;
 }
-.scroll{
+
+.scroll {
     position: fixed;
-    bottom: 4% ;
+    bottom: 4%;
     right: 2%;
-    background-color:#69c;
+    background-color: #69c;
     color: #FFFFFF;
     border: none;
     border-radius: 50%;
-    padding:.8%;
+    padding: .8%;
     font-size: 1.1rem;
     display: grid;
     place-items: center;
+}
+
+
+@media only screen and (min-width:150px)and (max-width:480px) {
+    .part1 {
+        width: 50%;
+    }
+
+    .part2 {
+        width: 50%;
+    }
+
+    .navbar img {
+        width: 25%;
+    }
+
+    .navbar h1 {
+        font-size: .7rem;
+    }
+
+    .navbar a {
+        text-align: center;
+        margin-left: 1%;
+        font-size: .6rem;
+    }
+
+    .overlay img {
+        height: 70%;
+        margin-top: 10%;
+    }
+
+    .overlay h2 {
+        font-size: .8rem;
+    }
+
+    .content {
+        width: 100%;
+        border-right: 8px solid #69c;
+        font-size: .8rem;
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+    .pin {
+        font-size: .8rem;
+    }
+
+    .pin span {
+        margin-left: 5%;
+
+    }
+    .alumni h1 {
+      font-size: 1rem;
+    }
+    .achieve{
+        display: none;
+    }
+    .address {
+        width: 100%;
+    }
+    .contact{
+        flex-wrap: wrap;
+    }
+    .admit {
+        width: 100%;
+    }
+    .scroll {
+        position: fixed;
+        bottom: 4%;
+        right: .5%;
+    }
 }

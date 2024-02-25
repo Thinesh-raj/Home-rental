@@ -31,6 +31,8 @@ function Teacher() {
         axios.get(" http://localhost:3000/Attendance", { headers: { Authorization: 'Basic U2FtOjIwNTY=' } })
             .then(res => setAttend((res.data.find(e => e.date == date).Attend).some(e => e.present == "yes")))
             .catch(err => console.log(err.message))
+            let item = localStorage.getItem("name")
+            if (item.substring(1,item.length-1)!=teachername) Navigate("/page/Teacher")
     }, [setData, setTimetable, setLeave, teachername, Day, date])
     function insert(e) {
         const { name, value } = e.target;

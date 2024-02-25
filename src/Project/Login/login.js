@@ -34,11 +34,10 @@ function Login() {
         data.pass.trim().length === 0 ? setPasschk(true) : setPasschk(false);
         axios.get(`http://localhost:3000/${login}`, { headers: { Authorization: 'Basic U2FtOjIwNTY=' } })
             .then((res) => {
-                console.log(res.data)
                 res.data.map(e => {
                     if (e.name === data.name && e.pass === data.pass) {
-                        Navigate(`/${login}page/${e.name}`)
-                        dispatch(admindetails(e.name))
+                        Navigate(`/${login}page/${e.name}`);
+                        localStorage.setItem("name",JSON.stringify(data.name));
                     }
                     else {
                         if (data.name.trim().length !== 0 && data.pass.trim().length !== 0) {
